@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+
 :root{
 /* background white theme */
 --bg-branco: #FFFFFF;
@@ -7,6 +8,7 @@
 --bg-rosa: #F5B7C6;
 --bg-rosa-2: #FCDFE3;
 --bg-rosa-da: #3B1C24;
+--bg-cinza: #dcdcdc;
 /* text color white theme */
 --txt-branco: #FFFFFF;
 --txt-preto: #000000;
@@ -100,7 +102,6 @@ img {
 
 header {
     display: flex;
-    flex-direction: column;
     width: 100%;
     top: 0;
     right: 0;
@@ -165,23 +166,26 @@ header {
 }
 
 .tx-in h2 {
-    font-size: var(--pequeno-size);
+    font-size: 1.1rem;
     font-weight: 200;
     margin: 0.5rem 0 1.4rem;
 }
 
 .tx-in a {
     font-size: var(--pequeno-size);
-    margin-right: 20px;
     color: var(--bg-rosa-da);
+    background: var(--bg-cinza);
+    border-radius: 0 10px 10px 10px;
+    margin-right: 20px;
     padding: 5px;
     transition: color 0.1s linear; 
 }
 
 .tx-in a:hover {
-    color: var(--txt-rosa); 
-    box-shadow: 0 1px 1px var(--sh-color);
+    background: var(--bg-rosa);
+    color: var(--txt-branco);
 }
+
 
 .img-in {
     flex: 1 1 17rem;
@@ -239,8 +243,12 @@ header {
     margin-top: 20px;
 }
 
-.text-sn {
+.text-sn p{
+    font-size: 1rem;
     margin-top: 30px;
+    letter-spacing: 0.02em;
+    line-height: 1.5; 
+
 }
 
 .vantagens {
@@ -248,33 +256,35 @@ header {
 }
 
 .itens-va {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    grid-gap: 2rem;
-    align-items: center;
-    text-align: center;
+    gap: 2rem;
+    align-items: stretch;
 }
 
 .box {
-    padding: 45px 45px 45px 45px;
+    padding: 45px;
     transition: ease .50s;
     cursor: pointer;
+    text-align: left;
 }
 
 .box h3 {
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 .box p {
+    font-size: 20px;
     font-weight: 300;
     color: var(--txt-cinza);
 }
 
 .box span {
-    color: var(--txt-rosa);
+    font-size: 15px;
+    color: var(--txt-rosa-2);
 }
 
 .box:hover {
@@ -282,8 +292,9 @@ header {
     box-shadow: 18px 0px 87px 0px var(--sh-color);
     border-radius: 10px;
     will-change: transform;
-    transform: translateY(-10px)
+    transform: translateY(-10px);
 }
+
 
 .colecao {
     background: var(--bg-branco);
@@ -304,7 +315,7 @@ header {
     transition: border-color 0.3s;
 }
 
-.box-im img:hover {
+.box-im img:hover {   
     border: 2px solid var(--bg-rosa);
 }
 
@@ -312,5 +323,54 @@ header {
     margin-right: 0;
 }
 
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+.contact{
+    background-color: var(--bg-branco-2);
+    display: flex;
+}
 
+.cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont a{
+    font-size: var(--pequeno-size);
+    margin-right: 20px;
+    color: var(--bg-rosa-da);
+    padding: 5px;
+    transition: color 0.1s linear; 
+}
+
+.copyright{
+    padding-top: 5%;
+    text-align: center;
+    font-size: var(--medio-size);
+} 
+
+.mainimage{
+    width: 45%;
+}
+
+.aboutuscontent{
+    display: flex;
+}
+
+.text-sn p{
+    font-size: var(--medio-size);
+}
+
+/* mapa do sobre nós */
+.map {
+    margin-top: 20px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px; 
+}
 
